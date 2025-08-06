@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul></ul>
+    <script>
+      const Listdata = [];
+      const ul = document.querySelector("ul");
+
+      const printInputValue = (value) => {
+        console.log(value);
+        Listdata.push(value);
+        console.log(Listdata);
+      };
+
+      const render = () => {
+        ul.innerHTML = "";
+        Listdata.map((element, index) => {
+          const li = document.createElement("li");
+          li.innerText = element;
+          ul.appendChild(li);
+          const btn = document.createElement("button");
+          btn.innerText = "remove";
+          li.appendChild(btn);
+          btn.addEventListener("click", () => {
+            const newLis = Listdata.filter((el, i) => {
+              return i !== index;
+            });
+            Listdata = newLis;
+            render();
+          });
+        });
+      };
+
+      const body = document.querySelector("body");
+      const input = document.createElement("input");
+      const button = document.createElement("button");
+
+      button.addEventListener("click", () => {
+        printInputValue(input.value);
+        render();
+      });
+
+      button.innerText = "Click";
+      body.appendChild(input);
+      body.appendChild(button);
+    </script>
+  </body>
+</html>

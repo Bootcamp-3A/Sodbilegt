@@ -1,0 +1,10 @@
+let body = document.getElementsByTagName("body")[0];
+let div = document.createElement("div");
+let h1 = document.createElement("h1");
+div.className = "fatherdiv";
+h1.innerText = "";
+h1.className = "header";
+body.appendChild(div);
+div.appendChild(h1);
+let div1 = document.greateElement("div");
+div.appendChild(div1);
