@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="dom.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=radio_button_unchecked"
+    />
+    <link <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style></style>
   </head>
   <body>
     <ul></ul>
     <script>
-      const Listdata = [];
+      let Listdata = [];
       const ul = document.querySelector("ul");
 
       const printInputValue = (value) => {
+        if (input.value == "") {
+          return alert("Yum bic");
+        }
         console.log(value);
         Listdata.push(value);
         console.log(Listdata);
@@ -33,6 +42,12 @@
             Listdata = newLis;
             render();
           });
+          const editButton = document.createElement("button");
+          const spn = document.createElement("span");
+          li.appendChild(editButton);
+          editButton.appendChild(spn);
+          spn.className = "material-symbols-outlined";
+          spn.innerText = "Edit";
         });
       };
 
@@ -43,6 +58,7 @@
       button.addEventListener("click", () => {
         printInputValue(input.value);
         render();
+        input.value = "";
       });
 
       button.innerText = "Click";
