@@ -10,11 +10,26 @@
       const body = document.querySelector("body");
       const btn = document.createElement("button");
       const image = document.createElement("img");
+
+      let isOn = false
+      btn.innerText = "On";
+
+      image.src = "ima/pic_bulboff.gif";
+
+      btn.addEventListener("click", () => {
+
+        isOn = !isOn
+        btn.innerText = isOn ? "Off" : "On";
+
+        if (isOn) {
+          image.src = "ima/pic_bulbon.gif"
+        } else {
+          image.src = "ima/pic_bulboff.gif"
+        }
+      });
+
       body.appendChild(btn);
       body.appendChild(image);
-      btn.innerText = "on";
-      image.src = "ima/pic_bulboff.gif";
-      btn.addEventListener("click", () => {});
     </script>
   </body>
 </html>
