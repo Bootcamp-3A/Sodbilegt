@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="dom.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const body = document.querySelector("body");
+      const red = document.createElement("div");
+      const blue = document.createElement("div");
+      body.appendChild(red);
+      body.appendChild(blue);
+      red.className = "Color";
+      blue.className = "Color1";
+      //   red.addEventListener("click", () => {
+      //     let currentWidth = parseInt(getComputedStyle(red).width);
+      //     let newWidth = currentWidth + 15;
+      //     red.style.width = newWidth + "px";
+      //     //
+      //     let Width = parseInt(getComputedStyle(blue).width);
+      //     let minus = Width - 15;
+      //     blue.style.width = minus + "px";
+      //   });
+      //   blue.addEventListener("click", () => {
+      //     let currentWidth = parseInt(getComputedStyle(blue).width);
+      //     let newWidth = currentWidth + 15;
+      //     blue.style.width = newWidth + "px";
+      //     //
+      //     let Width = parseInt(getComputedStyle(red).width);
+      //     let minus = Width - 15;
+      //     red.style.width = minus + "px";
+      //   });
+      //
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "a") {
+          let currentWidth = parseInt(getComputedStyle(red).width);
+          let newWidth = currentWidth + 25;
+          red.style.width = newWidth + "px";
+          //
+          let Width = parseInt(getComputedStyle(blue).width);
+          let minus = Width - 25;
+          blue.style.width = minus + "px";
+        } else if (event.key === "l") {
+          let currentWidth = parseInt(getComputedStyle(blue).width);
+          let newWidth = currentWidth + 25;
+          blue.style.width = newWidth + "px";
+          //
+          let Width = parseInt(getComputedStyle(red).width);
+          let minus = Width - 25;
+          red.style.width = minus + "px";
+        }
+      });
+    </script>
+  </body>
+</html>
