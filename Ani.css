@@ -1,0 +1,191 @@
+body {
+  margin: 0 auto;
+}
+.container {
+  background-image: url("ima/back.webp");
+  width: 100vw;
+  height: 100vh;
+  background-size: contain;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.box {
+  background-image: url(ima/sun.webp);
+  background-position: center;
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  /* transform: translateY(-50%); */
+  align-items: center;
+  animation: earth 5s 0s infinite linear;
+}
+.box1 {
+  width: 790px;
+  height: 790px;
+  border: 1px white dashed;
+  border-radius: 50%;
+  animation: rotate 50s 0s infinite linear;
+  position: relative;
+}
+.earth1 {
+  background-image: url(ima/1.jpg);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-size: cover;
+  position: absolute;
+  top: 28%;
+  animation: earth 40s 0s infinite linear;
+}
+@keyframes earth {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.box2 {
+  width: 710px;
+  height: 710px;
+  border: 1px white dashed;
+  border-radius: 50%;
+  animation: rotate 42s 0s infinite linear;
+  position: absolute;
+}
+.earth2 {
+  background-image: url(ima/2.jpg);
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+  top: 32%;
+  animation: earth 35s 0s infinite linear;
+}
+.box3 {
+  width: 620px;
+  height: 620px;
+  border: 1px white dashed;
+  border-radius: 50%;
+  animation: rotate 37s 0s infinite linear;
+  position: absolute;
+}
+.box4 {
+  width: 540px;
+  height: 540px;
+  border: 1px white dashed;
+  border-radius: 50%;
+  animation: rotate 30s 0s infinite linear;
+  position: absolute;
+}
+.box5 {
+  width: 450px;
+  height: 450px;
+  border: 1px white dashed;
+  border-radius: 50%;
+  animation: rotate 25s 0s infinite linear;
+  position: absolute;
+}
+.box6 {
+  width: 360px;
+  height: 360px;
+  border: 1px white dashed;
+  border-radius: 50%;
+  animation: rotate 18s 0s infinite linear;
+  position: absolute;
+}
+.box7 {
+  width: 260px;
+  height: 260px;
+  border: 1px white dashed;
+  border-radius: 50%;
+  animation: rotate 10s 0s infinite linear;
+  position: absolute;
+}
+.box8 {
+  width: 200px;
+  height: 200px;
+  border: 1px white dashed;
+  border-radius: 50%;
+  animation: rotate 5s 0s infinite linear;
+  position: absolute;
+}
+.earth3 {
+  background-image: url(ima/download-1.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  position: absolute;
+  top: 30%;
+  animation: earth 30s 0s infinite linear;
+}
+.earth4 {
+  background-image: url(ima/4.jpg);
+  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 34px;
+  height: 34px;
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+  top: 30%;
+  animation: earth 30s 0s infinite linear;
+}
+.earth5 {
+  background-image: url(ima/5.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 28%;
+  animation: earth 20s 0s infinite linear;
+}
+.earth6 {
+  background-image: url(ima/6.jpg);
+  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  position: absolute;
+  top: 28%;
+  animation: earth 15s 0s infinite linear;
+}
+.earth7 {
+  background-image: url(ima/7.jpg);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  position: absolute;
+  top: 24%;
+  animation: earth 10s 0s infinite linear;
+}
+.earth8 {
+  background-image: url(ima/8.jpg);
+  width: 22px;
+  height: 22px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  animation: earth 5s 0s infinite linear;
+}
