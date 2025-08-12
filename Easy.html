@@ -40,32 +40,80 @@
       text2.innerText = "Change Backround Color";
       button1.innerText = "Change Color";
       back.className = "color";
-      button1.addEventListener("click", () => {});
+      button1.addEventListener("click", () => {
+        back.style.backgroundColor = "black"
+      });
       //
       const div2 = document.querySelector("#e3");
       const text3 = document.createElement("h1");
       const ul = document.createElement("ul");
       const button2 = document.createElement("button");
-      body.appendChild(div2);
+      const input = document.createElement("input")
+      document.body.appendChild(div2);
       div2.appendChild(text3);
       div2.appendChild(ul);
       div2.appendChild(button2);
+      div2.appendChild(input)
+
       text3.innerText = "Add List Item";
       button2.innerText = "Add";
-      const list = [];
+
+      const List = []
+
       const print = (value) => {
-        list.push(value);
-      };
+        List.push(value)
+      } 
+
       const render = () => {
-        list.map((element) => {
-          const li = document.createElement("li");
-          li.innerText = element;
-        });
-      };
-      const input = document.createElement("input");
+        ul.innerHTML = ""
+        List.forEach((element) => {
+          const li = document.createElement("li")
+          li.innerText = element
+          ul.appendChild(li)
+        })
+      }
+
       button2.addEventListener("click", () => {
-        print(input.value);
-      });
+        if (input.value.trim() !== "") {
+          print(input.value)
+          render()
+          input.value = ""
+        }
+      })
+      // 
+      const div3 = document.querySelector("#e4")
+      const text4 = document.createElement("h1")
+      const text5 = document.createElement("p")
+      const button3 = document.createElement("button")
+      div3.appendChild(text4)
+      div3.appendChild(button3)
+      div3.appendChild(text5)
+      text4.innerText = "Hide & Show Element"
+      text5.innerText = "You can hide and show me"
+      button3.innerText = "Hide Show"
+      button3.addEventListener("click", () => {
+        text5.remove()
+      })
+      // 
+      const div4 = document.querySelector("#e5")
+      const text6 = document.createElement("h1")
+      const text7 = document.createElement("p")
+      const button4 = document.createElement("button")
+      div4.appendChild(text6)
+      div4.appendChild(text7)
+      div4.appendChild(button4)
+      text6.innerText = "Count Button Clicks"
+      text7.innerText = "Clicked 20 times"
+      button4.innerText = "Click me"
+      button4.addEventListener("click", () => {})
+      // 
+      const div5 = document.querySelector("#e6")
+      const text8 = document.createElement("h1")
+      const button5 = document.createElement("button")
+      div5.appendChild(button5)
+      div5.appendChild(text8)
+      text8.innerText = "Filter Numbers>8"
+      button5.innerText = "Show Number 5"
     </script>
   </body>
   <style>
