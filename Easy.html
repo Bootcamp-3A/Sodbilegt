@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="e1"></div>
+    <div id="e2"></div>
+    <div id="e3"></div>
+    <div id="e4"></div>
+    <div id="e5"></div>
+    <div id="e6"></div>
+    <script>
+      const body = document.querySelector("body");
+      const div = document.querySelector("#e1");
+      const text = document.createElement("h1");
+      const text1 = document.createElement("h2");
+      const button = document.createElement("button");
+      body.appendChild(div);
+      div.appendChild(text);
+      div.appendChild(text1);
+      div.appendChild(button);
+      text.innerText = "Change Text";
+      text1.innerText = "Hello";
+      button.innerText = "Change to";
+      button.addEventListener("click", () => {
+        text1.innerText = "Hi there";
+      });
+      //
+      const div1 = document.querySelector("#e2");
+      const text2 = document.createElement("h1");
+      const back = document.createElement("div");
+      const button1 = document.createElement("button");
+      body.appendChild(div1);
+      div1.appendChild(text2);
+      div1.appendChild(back);
+      div1.appendChild(button1);
+      text2.innerText = "Change Backround Color";
+      button1.innerText = "Change Color";
+      back.className = "color";
+      button1.addEventListener("click", () => {});
+      //
+      const div2 = document.querySelector("#e3");
+      const text3 = document.createElement("h1");
+      const ul = document.createElement("ul");
+      const button2 = document.createElement("button");
+      body.appendChild(div2);
+      div2.appendChild(text3);
+      div2.appendChild(ul);
+      div2.appendChild(button2);
+      text3.innerText = "Add List Item";
+      button2.innerText = "Add";
+      const list = [];
+      const print = (value) => {
+        list.push(value);
+      };
+      const render = () => {
+        list.map((element) => {
+          const li = document.createElement("li");
+          li.innerText = element;
+        });
+      };
+      const input = document.createElement("input");
+      button2.addEventListener("click", () => {
+        print(input.value);
+      });
+    </script>
+  </body>
+  <style>
+    body > div {
+      width: 350px;
+      height: 250px;
+      background-color: rgb(186, 180, 180);
+    }
+    body {
+      background-color: #fff;
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .color {
+      width: 250px;
+      height: 50px;
+      background-color: red;
+    }
+  </style>
+</html>
