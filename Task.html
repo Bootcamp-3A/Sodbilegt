@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body > div {
+      background-color: rgb(225, 137, 93);
+      width: 100vw;
+      height: 100vh;
+      text-align: center;
+      padding-top: 250px;
+    }
+    #h1 {
+      color: wheat;
+    }
+    #button {
+      border: 0;
+      color: wheat;
+      background-color: transparent;
+      font-size: 25px;
+    }
+    .btn {
+      border: 0;
+      width: 75px;
+      height: 25px;
+      background-color: rgb(241, 188, 141);
+      border-radius: 5px;
+    }
+    .btn:hover {
+      background-color: rgb(242, 217, 185);
+    }
+  </style>
+  <body>
+    <div id="div">
+      <h1 id="h1">JS Answer</h1>
+      <h3 id="h3"></h3>
+      <button id="button">Start</button>
+    </div>
+    <script>
+      let arr = [
+        {
+          q: "true + false",
+          a: [0, 1, 2, 3],
+          c: [1],
+        },
+        {
+          q: "!5 + !5",
+          a: [0, 5, 10, "Nan"],
+          c: [0],
+        },
+      ];
+
+      const body = document.querySelector("body");
+      const h1 = document.querySelector("#h1");
+      const h3 = document.querySelector("#h3");
+      const button = document.querySelector("#button");
+      const div = document.querySelector("#div");
+
+      let btn1 = document.createElement("button");
+      let btn2 = document.createElement("button");
+      let btn3 = document.createElement("button");
+      let btn4 = document.createElement("button");
+      btn1.className = "btn";
+      btn2.className = "btn";
+      btn3.className = "btn";
+      btn4.className = "btn";
+
+      button.addEventListener("click", () => {
+        button.remove(), h1.remove();
+
+        h3.innerText = arr[0].q;
+        btn1.innerText = arr[0].a[0];
+        btn2.innerText = arr[0].a[1];
+        btn3.innerText = arr[0].a[2];
+        btn4.innerText = arr[0].a[3];
+        div.appendChild(btn1);
+        div.appendChild(btn2);
+        div.appendChild(btn3);
+        div.appendChild(btn4);
+
+        [btn1, btn2, btn3, btn4].forEach((el) => {
+          el.addEventListener("click", () => {
+            h3.remove();
+            btn1.remove();
+            btn2.remove();
+            btn3.remove();
+            btn4.remove();
+            if ("") {
+              h3.innerText = arr[1].q;
+              btn1.innerText = arr[1].a[0];
+              btn2.innerText = arr[1].a[1];
+              btn3.innerText = arr[1].a[2];
+              btn4.innerText = arr[1].a[3];
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
